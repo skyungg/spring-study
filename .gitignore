@@ -1,21 +1,20 @@
 # 💡 공통 설정 (Java, Gradle, Maven, IDE 관련) ===========================
 
 # Java compiled class files
-.class
+*.class
 
 # Log files
-logs
-.log
-.log.
+logs/
+*.log
 
 # IDE 관련 설정 (IntelliJ, Eclipse, VS Code 등)
-.idea
+.idea/
 .iml
 .iws
-.vscode
+.vscode/
 .project
 .classpath
-.settings
+.settings/
 
 # Mac OS 관련
 .DS_Store
@@ -24,13 +23,13 @@ logs
 Thumbs.db
 
 # Gradle 관련
-.gradle
-build
-!gradlewrappergradle-wrapper.jar
-!gradlewrappergradle-wrapper.properties
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
 # Maven 관련
-target
+target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -40,32 +39,30 @@ dependency-reduced-pom.xml
 buildNumber.properties
 
 # Java Archive files (JAR, WAR, EAR)
-.jar
-.war
-.ear
+*.jar
+*.war
+*.ear
 
 # 💡 Spring & Spring Boot 공통 설정 =====================================
 
-# Spring 설정 파일
-.properties
-.yml
-.yaml
-!srcmainresourcesapplication.yml
-!srcmainresourcesapplication.properties
+# Spring 설정 파일 (환경 파일 무시)
+*.properties
+*.yml
+*.yaml
 
 # Database files (H2, SQLite 등)
-.db
-.sql
-.sqlite
-.h2.db
-.mv.db
+*.db
+*.sql
+*.sqlite
+*.h2.db
+*.mv.db
 
 # Temporary files
-.cache
-.temp
-.swp
-.swo
-.swn
+.cache/
+.temp/
+*.swp
+*.swo
+*.swn
 
 # 💡 Spring Boot 특화 설정 ============================================
 
@@ -76,15 +73,14 @@ buildNumber.properties
 .lombok.config
 
 # Session, Cache 폴더
-.session
-.cache
+.session/
+.cache/
 
 # Spring Boot 배포 관련 파일 (JAR, WAR, Docker 등)
-.jar
-.war
-.ear
+*.jar
+*.war
+*.ear
 
 # Docker 관련 파일
 .dockerignore
 docker-compose.override.yml
-
