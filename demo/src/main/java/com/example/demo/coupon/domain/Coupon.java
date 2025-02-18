@@ -29,4 +29,8 @@ public class Coupon extends BaseTime{
     @JoinColumn(name = "user_id")
     private User user;
 
+    public void updateStatus(final String status){
+        this.status = status;
+    }
+
 }
