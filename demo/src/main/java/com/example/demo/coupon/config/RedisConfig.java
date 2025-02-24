@@ -1,7 +1,7 @@
 package com.example.demo.coupon.config;
 
-
 import com.example.demo.coupon.util.RedisExpirationListener;
+import java.time.Duration;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
@@ -18,8 +18,6 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-
-import java.time.Duration;
 
 @Configuration
 @EnableRedisRepositories
@@ -63,12 +61,11 @@ public class RedisConfig {
     }
 
     /*
-        Redis에서 발생하는 이벤트를 감지하고, 등록된 리스너(listener)를 실행
-     */
+       Redis에서 발생하는 이벤트를 감지하고, 등록된 리스너(listener)를 실행
+    */
     @Bean
     public RedisMessageListenerContainer redisMessageListenerContainer(
-            RedisConnectionFactory connectionFactory,
-            MessageListenerAdapter listenerAdapter) {
+            RedisConnectionFactory connectionFactory, MessageListenerAdapter listenerAdapter) {
 
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(connectionFactory);
@@ -79,9 +76,9 @@ public class RedisConfig {
     }
 
     /*
-        Redis 이벤트가 발생했을 때,
-        이를 실제로 처리할 리스너(RedisExpirationListener)로 전달
-     */
+       Redis 이벤트가 발생했을 때,
+       이를 실제로 처리할 리스너(RedisExpirationListener)로 전달
+    */
     @Bean
     public MessageListenerAdapter listenerAdapter(RedisExpirationListener listener) {
         return new MessageListenerAdapter(listener, "onMessage");

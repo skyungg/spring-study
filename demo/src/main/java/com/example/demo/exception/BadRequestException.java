@@ -3,7 +3,7 @@ package com.example.demo.exception;
 import lombok.Getter;
 
 @Getter
-public class BadRequestException extends RuntimeException{
+public class BadRequestException extends RuntimeException {
     private final String code;
     private final String message;
 

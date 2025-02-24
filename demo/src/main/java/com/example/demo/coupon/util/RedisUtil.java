@@ -1,11 +1,10 @@
 package com.example.demo.coupon.util;
 
-import org.springframework.stereotype.Component;
+import java.time.Duration;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-
-import java.time.Duration;
+import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor

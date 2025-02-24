@@ -10,7 +10,7 @@ import lombok.*;
 @Table(name = "coupon")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class Coupon extends BaseTime{
+public class Coupon extends BaseTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +29,7 @@ public class Coupon extends BaseTime{
     @JoinColumn(name = "user_id")
     private User user;
 
-    public void updateStatus(final String status){
+    public void updateStatus(final String status) {
         this.status = status;
     }
-
 }

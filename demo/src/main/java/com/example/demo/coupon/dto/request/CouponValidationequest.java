@@ -29,8 +29,6 @@ public class CouponValidationequest {
 
     public static CouponValidationequest of(UseCouponRequest useCouponRequest, String status) {
         return new CouponValidationequest(
-                useCouponRequest.getCouponId(),
-                useCouponRequest.getUserId(),
-                status);
+                useCouponRequest.getCouponId(), useCouponRequest.getUserId(), status);
     }
 }

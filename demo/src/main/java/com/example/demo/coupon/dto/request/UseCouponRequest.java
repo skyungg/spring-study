@@ -5,7 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 
 @Getter
@@ -21,5 +20,4 @@ public class UseCouponRequest {
     @Schema(description = "현재 사용하려는 쿠폰 아이디")
     @NotNull
     private Long couponId;
-
 }

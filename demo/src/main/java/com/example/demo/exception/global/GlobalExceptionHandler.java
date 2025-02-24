@@ -1,10 +1,12 @@
 package com.example.demo.exception.global;
 
-import java.util.Enumeration;
-import java.util.Objects;
+import static com.example.demo.exception.CustomExceptionStatus.*;
+
 import com.example.demo.exception.BadRequestException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
+import java.util.Enumeration;
+import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -15,8 +17,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
-import static com.example.demo.exception.CustomExceptionStatus.*;
 
 @Slf4j
 @RestControllerAdvice

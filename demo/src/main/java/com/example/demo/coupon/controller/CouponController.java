@@ -18,8 +18,7 @@ public class CouponController {
 
     @Operation(summary = "Use coupon")
     @PostMapping("/coupon")
-    public ResponseEntity<?> useCoupon(
-            @RequestBody final UseCouponRequest useCouponRequest) {
+    public ResponseEntity<?> useCoupon(@RequestBody final UseCouponRequest useCouponRequest) {
         couponService.useCoupon(useCouponRequest);
         return ResponseEntity.noContent().build();
     }
